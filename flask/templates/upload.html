@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>Data entering form</title>
+<style>
+body
+{
+background: linear-gradient(110deg, #1CB5E0 0%, #000851 100%);
+}
+.head
+{
+color:#efe14a;
+padding:10px;
+text-align:center;
+text-decoration:underline;
+}
+.myclass
+{
+background: linear-gradient(110deg, #f8ff00 0%, #3ad59f 100%);
+height:620px;
+width:700px;
+border-radius:10px;
+}
+label
+{
+align:center;
+font-family:gabriola;
+font-size:25px;
+font-weight:bold;
+}
+input[type="submit"]
+{
+font-size:25px;
+color:#efe14a;
+background-image:linear-gradient(to right,#020328,#020328);
+font-family:gabriola;
+font-weight:bold;
+border-radius:10px;
+}
+input[type="reset"]
+{
+font-size:25px;
+font-family:gabriola;
+font-weight:bold;
+color:#efe14a;
+background-image:linear-gradient(to right,#020328,#020328);
+border-radius:10px;
+}
+input[type="text"]
+{
+font-size:20px;
+border-radius:5px;
+}
+input[type="number"]
+{
+font-size:20px;
+border-radius:5px;
+}
+</style>
+</head>
+<body>
+<div class="head">
+<center><i><h1>3D Printer Material Prediction</h1></i></center>
+</div>
+<br>
+<center>
+<div class="myclass">
+<form action="{{url_for('predict')}}" method="post">
+<br>
+<table>
+<tr>
+<td><label for="lh"><i>Layer_height : </i></label></td>
+<td><input type="text" name="lh" required></td>
+</tr>
+<tr>
+<td><label for="wt"><i>Wall_thickness : </i></label></td>
+<td><input type="number" name="wt" required></td>
+</tr>
+<tr>
+<td><label for="id"><i>Infill_density : </i></label></td>
+<td><input type="number" name="id" required></td>
+</tr>
+<tr>
+<td><label for="ip"><i>Infill_pattern : </i></label></td>
+<td><input type="text" name="ip" placeholder="enter grid or honeycomb" required></td>
+</tr>
+<tr>
+<td><label for="nt"><i>Nozzle_temperature : &nbsp&nbsp&nbsp&nbsp</i></label></td>
+<td><input type="number" name="nt" required></td>
+</tr>
+<tr>
+<td><label for="bt"><i>Bed_temperature : </i></label></td>
+<td><input type="number" name="bt" required></td>
+</tr>
+<tr>
+<td><label for="ps"><i>Print_speed : </i></label></td>
+<td><input type="number" name="ps" required></center></td>
+</tr>
+<tr>
+<td><label for="fs"><i>Fan_speed : </i></label></td>
+<td><input type="number" name="fs" required></td>
+</tr>
+<tr>
+<td><label for="rough"><i>Roughness : </i></label></td>
+<td><input type="number" name="rough" required></td>
+</tr>
+<tr>
+<td><label for="ts"><i>Tension_strength : </i></label></td>
+<td><input type="number" name="ts" required></td>
+</tr>
+<tr>
+<td><label for="elong"><i>Elongation : </i></label></td>
+<td><input type="text" name="elong" required></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><input type="submit" value="Predict" name="submit"></td>
+<td><input type="reset" value="Cancel" name="cancel"></td>
+</tr>
+</form>
+</div>
+</center>
+</body>
+</html>

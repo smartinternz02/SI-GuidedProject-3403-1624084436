@@ -1,0 +1,62 @@
+<html>
+<head>
+<style>
+body{
+background-image:linear-gradient(#20E2D7,#F9FEA5);
+}
+td
+{
+text-align:center;
+}
+a{
+list-style-type:none;
+}
+a{
+text-decoration:none;
+color:white;
+display:inline-block;
+font-family:gabriola;
+font-size:30px;
+font-weight:bold;
+text-align:center;
+}
+a
+{
+padding:30px;
+height:40px;
+width:110px;
+border-radius:5px;
+color:white;
+background-image:linear-gradient(#09203f,#537895);
+text-align:center;
+float:left;
+}
+a:hover
+{
+font-size:30px;
+padding:30px;
+height:40px;
+width:110px;
+background-image:linear-gradient(to right,#f83600,#f9d423);
+color:black;
+}
+</style>
+</head>
+<body>
+<br><center>
+<video width="100%" height="400" autoplay muted>
+  <source src={{ url_for('static', filename="videoai.mp4") }} type="video/mp4">
+Your browser does not support the video tag.
+</video></center>
+<br>
+<br>
+<center>
+<table>
+<tr>
+<td><a href={{ url_for('home') }}>Home</a></td>
+<td><a href={{ url_for('upload') }}>Predict</a></td>
+</tr>
+</table>
+</center>
+</body>
+</html>
